@@ -1,5 +1,3 @@
-from __future__ import print_function
-from dask import visualize
 import pygame
 import neat
 import time
@@ -295,9 +293,6 @@ def run(config_path):
 
     winner = p.run(main, 50) #quante volte viene eseguita la funzione
     print('\nBest genome:\n{!s}'.format(winner))
-    visualize.draw_net(config, winner, True, node_names=node_names)
-    visualize.plot_stats(stats, ylog=False, view=True)
-    visualize.plot_species(stats, view=True)
 
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
